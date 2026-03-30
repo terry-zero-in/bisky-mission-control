@@ -9,6 +9,7 @@ import {
   Crosshair,
   Activity,
   FileText,
+  Terminal,
   Menu,
   X,
 } from "lucide-react";
@@ -18,6 +19,7 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
   { href: "/tasks", label: "Tasks", icon: ListChecks },
+  { href: "/commands", label: "Commands", icon: Terminal },
   { href: "/opportunities", label: "Opportunities", icon: Crosshair },
   { href: "/briefing", label: "Briefing", icon: FileText },
 ];
