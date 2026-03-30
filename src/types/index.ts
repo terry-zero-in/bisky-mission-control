@@ -45,6 +45,14 @@ export interface BriefingEntry {
   marketObservation: string;
 }
 
+export interface ContextSnapshot {
+  tokens: string;       // e.g. "61k/1.0m"
+  percent: number;      // e.g. 6
+  practicalPercent?: number; // % of 250K practical ceiling
+  compactions: number;
+  timestamp: string;    // ISO or human-readable
+}
+
 export interface SessionEntry {
   id: string;
   number: number;
@@ -53,8 +61,10 @@ export interface SessionEntry {
   status: "active" | "completed";
   timeRange: string;
   opening: string;
-  syncs: { label: string; summary: string }[];
+  syncs: { label: string; summary: string; context?: ContextSnapshot }[];
   closeout: string;
+  closeoutContext?: ContextSnapshot;
+  currentContext?: ContextSnapshot; // live, for active session only
   accomplishments: string[];
   inProgress?: string[];
 }
@@ -67,16 +77,4 @@ export interface TimelineWeek {
   status: "completed" | "active" | "future";
 }
 
-export interface SessionEntry {
-  id: string;
-  number: number;
-  date: string;
-  title: string;
-  status: "active" | "completed";
-  timeRange: string;
-  opening: string;
-  syncs: { label: string; summary: string }[];
-  closeout: string;
-  accomplishments: string[];
-  inProgress?: string[];
-}
+

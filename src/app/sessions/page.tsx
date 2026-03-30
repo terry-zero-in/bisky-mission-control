@@ -7,7 +7,64 @@ import { Card } from "@/components/ui/Card";
 import { Modal } from "@/components/ui/Modal";
 import { sessions } from "@/lib/data";
 import type { SessionEntry } from "@/types";
-import { CheckCircle2, Circle, Clock, ChevronRight } from "lucide-react";
+import { CheckCircle2, Circle, Clock, ChevronRight, Cpu } from "lucide-react";
+import type { ContextSnapshot } from "@/types";
+
+function ContextBadge({ ctx, label }: { ctx: ContextSnapshot; label?: string }) {
+  // Color based on practical percent (250K ceiling)
+  const pp = ctx.practicalPercent ?? 0;
+  const color =
+    pp >= 90
+      ? "text-red bg-red/10"
+      : pp >= 60
+        ? "text-amber bg-amber/10"
+        : "text-green bg-green/10";
+
+  return (
+    <div className={`inline-flex items-center gap-1.5 rounded-md px-2 py-1 ${color}`}>
+      <Cpu size={10} />
+      <span className="font-[family-name:var(--font-jetbrains)] text-[10px] font-medium">
+        {label ? `${label}: ` : ""}{ctx.percent}%
+        {ctx.practicalPercent !== undefined && (
+          <span className="text-text-muted"> · {ctx.practicalPercent}% ceil</span>
+        )}
+      </span>
+    </div>
+  );
+}
+
+function ContextBar({ ctx }: { ctx: ContextSnapshot }) {
+  const pp = ctx.practicalPercent ?? 0;
+  const color =
+    pp >= 90
+      ? "bg-red"
+      : pp >= 60
+        ? "bg-amber"
+        : "bg-green";
+
+  return (
+    <div className="space-y-1.5">
+      <div className="flex items-center justify-between text-[11px]">
+        <span className="text-text-muted">Context Window</span>
+        <span className="font-[family-name:var(--font-jetbrains)] text-text-secondary">
+          {ctx.tokens}
+        </span>
+      </div>
+      <div className="h-1.5 w-full rounded-full bg-border">
+        <div
+          className={`h-full rounded-full ${color} transition-all`}
+          style={{ width: `${Math.min(ctx.percent, 100)}%` }}
+        />
+      </div>
+      <div className="flex items-center justify-between text-[10px] text-text-muted">
+        <span>{ctx.percent}% of 1M</span>
+        {ctx.practicalPercent !== undefined && (
+          <span>{ctx.practicalPercent}% of 250K ceiling</span>
+        )}
+      </div>
+    </div>
+  );
+}
 
 function SessionCard({
   session,
@@ -62,6 +119,15 @@ function SessionCard({
             <span>·</span>
             <span>{session.timeRange}</span>
           </div>
+          {/* Context badge on card */}
+          {(session.closeoutContext || session.currentContext) && (
+            <div className="mt-1.5">
+              <ContextBadge
+                ctx={(session.currentContext || session.closeoutContext)!}
+                label={session.currentContext ? "Live" : "Close"}
+              />
+            </div>
+          )}
           <p className="mt-1 truncate text-[12px] text-text-secondary">
             {session.opening}
           </p>
@@ -129,8 +195,39 @@ function SessionDetail({ session }: { session: SessionEntry }) {
                 <p className="text-[12px] leading-relaxed text-text-secondary">
                   {sync.summary}
                 </p>
+                {sync.context && (
+                  <div className="mt-2">
+                    <ContextBar ctx={sync.context} />
+                  </div>
+                )}
               </div>
             ))}
+          </div>
+        </div>
+      )}
+
+      {/* Context snapshot */}
+      {isActive && session.currentContext && (
+        <div>
+          <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-text-muted">
+            Live Context
+          </div>
+          <div className="rounded-md bg-bg p-3">
+            <ContextBar ctx={session.currentContext} />
+            <div className="mt-1.5 text-[10px] text-text-muted">
+              Updated {session.currentContext.timestamp} · {session.currentContext.compactions} compactions
+            </div>
+          </div>
+        </div>
+      )}
+
+      {!isActive && session.closeoutContext && (
+        <div>
+          <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-text-muted">
+            Context at Close
+          </div>
+          <div className="rounded-md bg-bg p-3">
+            <ContextBar ctx={session.closeoutContext} />
           </div>
         </div>
       )}

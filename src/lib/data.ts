@@ -5,6 +5,7 @@ import type {
   BriefingEntry,
   TimelineWeek,
   SessionEntry,
+  ContextSnapshot,
 } from "@/types";
 
 export const tasks: Task[] = [
@@ -303,6 +304,13 @@ export const sessions: SessionEntry[] = [
     syncs: [],
     closeout:
       "Full Mission Control operational. All identity and operating files created. First market scan complete. Basis repo reviewed + font fix committed. Mission Control web app shipped. 💡 Protocol created. OCR recommendation delivered. WEEK1_KICKOFF_BRIEF built overnight.",
+    closeoutContext: {
+      tokens: "~50k/1.0m",
+      percent: 5,
+      practicalPercent: 20,
+      compactions: 0,
+      timestamp: "2026-03-29 23:34 CDT",
+    },
     accomplishments: [
       "🦞 Bisky alive — identity, voice, operating system locked",
       "Full Mission Control file structure (13+ files)",
@@ -329,9 +337,23 @@ export const sessions: SessionEntry[] = [
         label: "Sync #1 (10:20 AM)",
         summary:
           "~4,800 words | ~10% context. Locked /sync + /closeout protocol. Created TODO, STATUS, INDEX, COMMANDS, RULES, OPPORTUNITIES. Agent Context Dashboard concept developed. OCR decision confirmed (Azure). Model upgraded Sonnet → Opus.",
+        context: {
+          tokens: "~100k/1.0m",
+          percent: 10,
+          practicalPercent: 40,
+          compactions: 0,
+          timestamp: "2026-03-30 10:20 CDT",
+        },
       },
     ],
     closeout: "~7,200 words | ~15% context | Sharp, no degradation.",
+    closeoutContext: {
+      tokens: "~150k/1.0m",
+      percent: 15,
+      practicalPercent: 60,
+      compactions: 0,
+      timestamp: "2026-03-30 12:13 CDT",
+    },
     accomplishments: [
       "📋 Full command framework operational (COMMANDS.md, RULES.md, all slash commands)",
       "🧠 Agent Context Dashboard concept (H conviction, internal → productize)",
@@ -355,9 +377,23 @@ export const sessions: SessionEntry[] = [
         label: "Sync #1 (12:55 PM)",
         summary:
           "~45,000 words | ~55-60% context. Read full Strategy PDF, researched all competitor links live, extracted all 18 project files, created BASIS_MASTER_BIBLE_v2.md. All doc conflicts resolved — Strategy Session is decision of record.",
+        context: {
+          tokens: "~575k/1.0m",
+          percent: 58,
+          practicalPercent: 230,
+          compactions: 0,
+          timestamp: "2026-03-30 12:55 CDT",
+        },
       },
     ],
     closeout: "~50,000 words | ~65% context | Sharp, no degradation.",
+    closeoutContext: {
+      tokens: "~650k/1.0m",
+      percent: 65,
+      practicalPercent: 260,
+      compactions: 0,
+      timestamp: "2026-03-30 13:24 CDT",
+    },
     accomplishments: [
       "📖 BASIS_MASTER_BIBLE_v2.md — single source of truth, 22 sections, 35K+ bytes",
       "🎯 /basis and /ccrentrollanalyzer commands ready",
@@ -382,10 +418,24 @@ export const sessions: SessionEntry[] = [
         label: "Sync #1 (3:36 PM)",
         summary:
           "~85,000+ words | 16% of 1M context. Integrations audit complete. Notion connected. Sessions page deployed. v0 repo analyzed. v6.3 HTML themes extracted. 4 Figma screenshots analyzed. 5-theme recommendation proposed. 13.6KB component spec consolidated.",
+        context: {
+          tokens: "~160k/1.0m",
+          percent: 16,
+          practicalPercent: 64,
+          compactions: 0,
+          timestamp: "2026-03-30 15:36 CDT",
+        },
       },
     ],
     closeout:
       "~245K / 1M (24%) — 98% of 250K practical ceiling. Sharp throughout. Massive session.",
+    closeoutContext: {
+      tokens: "245k/1.0m",
+      percent: 24,
+      practicalPercent: 98,
+      compactions: 0,
+      timestamp: "2026-03-30 17:53 CDT",
+    },
     accomplishments: [
       "✅ Notion integration live (Maton OAuth)",
       "✅ Browser automation live (Chrome CDP, Playwright)",
@@ -410,11 +460,19 @@ export const sessions: SessionEntry[] = [
       "New session. Executed 3 carryover items from Session #4 closeout: fleshed out Sessions #1-3 with full raw detail, established briefing hierarchy rule, full TODO.md audit. New rule: always read previous notes on session start.",
     syncs: [],
     closeout: "",
+    currentContext: {
+      tokens: "61k/1.0m",
+      percent: 6,
+      practicalPercent: 24,
+      compactions: 0,
+      timestamp: "2026-03-30 18:09 CDT",
+    },
     accomplishments: [
       "Session #4 carryover items executed (3/3)",
       "New rule: read previous session notes on startup, never ask",
       "SESSION_LOG.md Sessions #1-3 fleshed out with raw detail",
       "TODO.md fully audited and updated",
+      "Mission Control data fully updated + pushed",
     ],
     inProgress: [
       "Basis codebase review (step 1 of 5)",
