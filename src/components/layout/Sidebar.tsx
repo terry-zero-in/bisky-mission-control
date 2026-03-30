@@ -51,7 +51,7 @@ export function Sidebar() {
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed left-0 top-0 z-50 flex h-screen w-[220px] flex-col bg-surface py-6 transition-transform duration-200 lg:translate-x-0",
+          "fixed left-0 top-0 z-50 flex h-screen w-[220px] flex-col bg-sidebar py-6 transition-transform duration-200 lg:translate-x-0",
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
@@ -91,8 +91,8 @@ export function Sidebar() {
                 className={cn(
                   "flex items-center gap-3 rounded-md px-3 py-2 text-[13px] transition-colors",
                   isActive
-                    ? "border-l-2 border-accent bg-accent/8 text-text-primary"
-                    : "border-l-2 border-transparent text-text-secondary hover:bg-surface-elevated hover:text-text-primary"
+                    ? "border-l-2 border-accent bg-surface text-text-primary"
+                    : "border-l-2 border-transparent text-text-secondary hover:bg-surface hover:text-text-primary"
                 )}
               >
                 <item.icon size={16} />
