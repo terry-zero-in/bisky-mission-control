@@ -11,10 +11,10 @@
   --color-text-secondary: #B3B3BE;
   --color-text-muted: #8F8F9F;
   --color-accent: #00C8FF;
-  --color-green: #22C55E;
-  --color-amber: #F59E0B;
+  --color-green: #34D399;
+  --color-amber: #FBBF24;
   --color-red: #FF5E5E;
-  --color-purple: #A855F7;
+  --color-purple: #A78BFA;
 
   --font-sans: var(--font-geist);
   --font-mono: var(--font-jetbrains);
