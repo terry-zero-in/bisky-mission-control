@@ -10,6 +10,7 @@ import {
   Activity,
   FileText,
   Terminal,
+  MessageSquare,
   Menu,
   X,
 } from "lucide-react";
@@ -18,6 +19,7 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/sessions", label: "Sessions", icon: MessageSquare },
   { href: "/tasks", label: "Tasks", icon: ListChecks },
   { href: "/commands", label: "Commands", icon: Terminal },
   { href: "/opportunities", label: "Opportunities", icon: Crosshair },

@@ -4,6 +4,7 @@ import type {
   Competitor,
   BriefingEntry,
   TimelineWeek,
+  SessionEntry,
 } from "@/types";
 
 export const tasks: Task[] = [
@@ -280,6 +281,96 @@ export const timeline: TimelineWeek[] = [
     dateRange: "May 16 – May 22",
     focus: "Launch",
     status: "future",
+  },
+];
+
+export const sessions: SessionEntry[] = [
+  {
+    id: "s1",
+    number: 1,
+    date: "March 29, 2026",
+    title: "Setup Day",
+    status: "completed",
+    timeRange: "Initial setup session",
+    opening:
+      "First boot. OpenClaw installed, Telegram connected, identity established. Built the entire Mission Control file system from scratch.",
+    syncs: [],
+    closeout:
+      "Full Mission Control operational. All identity and operating files created. First market scan complete. Web app shipped.",
+    accomplishments: [
+      "Bisky is alive — identity, voice, operating system all locked",
+      "Full Mission Control file structure operational",
+      "First market scan complete",
+      "Mission Control web app shipped same day",
+    ],
+  },
+  {
+    id: "s2",
+    number: 2,
+    date: "March 30, 2026",
+    title: "Framework & Commands",
+    status: "completed",
+    timeRange: "12:13 AM – 12:13 PM CDT",
+    opening:
+      "Overnight into morning. Framework and command system buildout, then Agent Context Dashboard deep dive with Terry.",
+    syncs: [
+      {
+        label: "Sync #1 (10:20 AM)",
+        summary:
+          "~4,800 words | ~10% context. Locked /sync + /closeout protocol. Created TODO, STATUS, INDEX, COMMANDS, RULES, OPPORTUNITIES. Agent Context Dashboard concept developed.",
+      },
+    ],
+    closeout: "~7,200 words | ~15% context | Sharp, no degradation.",
+    accomplishments: [
+      "Full command framework operational",
+      "Agent Context Dashboard concept — internal tool with productization path",
+      "OCR provider decided (Azure Document Intelligence)",
+      "Upgraded to Opus 4.6",
+    ],
+  },
+  {
+    id: "s3",
+    number: 3,
+    date: "March 30, 2026",
+    title: "Basis Ingestion",
+    status: "completed",
+    timeRange: "12:15 PM – 1:24 PM CDT",
+    opening:
+      "Massive ingestion session. Terry sent the full Basis Strategy Session PDF (14 pages), all 18 project files (zipped), and the full HTML export with interactive split-pane mockup.",
+    syncs: [
+      {
+        label: "Sync #1 (12:55 PM)",
+        summary:
+          "~45,000 words | ~55-60% context. Read full Strategy PDF, researched all competitor links live, extracted and read all 18 project files, created BASIS_MASTER_BIBLE_v2.md.",
+      },
+    ],
+    closeout: "~50,000 words | ~65% context | Sharp, no degradation.",
+    accomplishments: [
+      "BASIS_MASTER_BIBLE_v2.md — single source of truth, 22 sections",
+      "/basis and /ccrentrollanalyzer commands ready for instant context load",
+      "Live competitor research surfaced intel not in any docs",
+      "Claude Code build spec written and ready to send",
+    ],
+  },
+  {
+    id: "s4",
+    number: 4,
+    date: "March 30, 2026",
+    title: "Integrations & Session System",
+    status: "active",
+    timeRange: "1:35 PM CDT –",
+    opening:
+      "New session. Integrations audit — reviewed all 50 OpenClaw skills and 42+ plugins. Setting up Notion, browser, and session logging system.",
+    syncs: [],
+    closeout: "",
+    accomplishments: [],
+    inProgress: [
+      "Notion connected (Maton OAuth active)",
+      "Browser setup discussed (Brave, Playwright needed)",
+      "Session Orchestrator system built",
+      "Integrations prioritized: Notion → Google Workspace → Brave Search",
+      "Sessions page added to Mission Control",
+    ],
   },
 ];
 

@@ -45,10 +45,38 @@ export interface BriefingEntry {
   marketObservation: string;
 }
 
+export interface SessionEntry {
+  id: string;
+  number: number;
+  date: string;
+  title: string;
+  status: "active" | "completed";
+  timeRange: string;
+  opening: string;
+  syncs: { label: string; summary: string }[];
+  closeout: string;
+  accomplishments: string[];
+  inProgress?: string[];
+}
+
 export interface TimelineWeek {
   week: number;
   label: string;
   dateRange: string;
   focus: string;
   status: "completed" | "active" | "future";
+}
+
+export interface SessionEntry {
+  id: string;
+  number: number;
+  date: string;
+  title: string;
+  status: "active" | "completed";
+  timeRange: string;
+  opening: string;
+  syncs: { label: string; summary: string }[];
+  closeout: string;
+  accomplishments: string[];
+  inProgress?: string[];
 }
