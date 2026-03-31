@@ -458,8 +458,8 @@ export const sessions: SessionEntry[] = [
     number: 5,
     date: "March 30, 2026",
     title: "Codebase Review + Design System Lock",
-    status: "active",
-    timeRange: "5:57 PM CDT –",
+    status: "completed",
+    timeRange: "5:57 PM – 10:26 PM CDT",
     opening:
       "New session. Executed 3 carryover items from Session #4 closeout: fleshed out Sessions #1-3 with full raw detail, established briefing hierarchy rule, full TODO.md audit. New rule: always read previous notes on session start.",
     syncs: [
