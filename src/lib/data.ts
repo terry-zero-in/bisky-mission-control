@@ -218,6 +218,20 @@ export const competitors: Competitor[] = [
 
 export const briefings: BriefingEntry[] = [
   {
+    id: "b2",
+    date: "March 31, 2026",
+    focus:
+      "Session #7 — Mission Control product polish + go-to-market. Template must be pixel-perfect before listing. Sell strategy complete — pricing, channels, launch playbook locked.",
+    priorities: [
+      "Review all Mission Control pages for quality — fix every issue Terry flags",
+      "Build Insights page (two-column, expandable cards, domain filters)",
+      "Finalize product for sale — Gumroad + Lemon Squeezy listing prep",
+      "52 days to Basis launch — template revenue funds the runway",
+    ],
+    marketObservation:
+      "AI agent template market heating up fast. No purpose-built ops dashboard exists yet — generic admin panels dominate. First-mover window is open. Comparable boilerplates (ShipFast, Supastarter) doing $50K-$200K+/yr at $169-$299.",
+  },
+  {
     id: "b1",
     date: "March 30, 2026",
     focus:
@@ -293,6 +307,54 @@ export const timeline: TimelineWeek[] = [
 ];
 
 export const sessions: SessionEntry[] = [
+  {
+    id: "s7",
+    number: 7,
+    date: "March 31, 2026",
+    title: "Mission Control Polish + Go-to-Market",
+    status: "active",
+    timeRange: "8:00 AM CDT –",
+    opening:
+      "Product quality pass. Terry reviewing every page of Mission Control for pixel-perfection before sale. Obsidian theme applied, Tools + Skills pages shipped. Sell strategy researched and locked — pricing tiers, 14 launch platforms, social media playbook, 4-week launch sequence.",
+    syncs: [
+      {
+        number: 1,
+        time: "8:39 AM CDT",
+        summary:
+          "Obsidian theme applied to all 16 components. Tools page (16 tools, 5 categories, CRUD) and Skills page (6-agent toggle, categorized shortcuts, CRUD) built and pushed. Two Claude Code sessions failed, third succeeded.",
+        context: {
+          tokens: "~45k/1.0m",
+          percent: 5,
+          practicalPercent: 18,
+          compactions: 0,
+          timestamp: "2026-03-31 08:39 CDT",
+        },
+      },
+    ],
+    closeout: "",
+    currentContext: {
+      tokens: "~60k/1.0m",
+      percent: 6,
+      practicalPercent: 24,
+      compactions: 0,
+      timestamp: "2026-03-31 09:19 CDT",
+    },
+    accomplishments: [
+      "Obsidian theme applied across all 16 component files",
+      "Tools page built — 16 tools, 5 categories, card grid, full CRUD",
+      "Skills page built — 6-agent toggle, categorized shortcuts, full CRUD",
+      "Full sell strategy researched and written (OPPORTUNITIES.md)",
+      "Pricing locked: $49 / $99 / $199 three-tier",
+      "14 launch platforms identified and prioritized",
+      "Reddit strategy: 10 subreddits mapped with specific tactics",
+      "4-week launch playbook written",
+    ],
+    inProgress: [
+      "Terry reviewing all pages for quality — fixing every issue flagged",
+      "Insights page build (next after polish pass)",
+      "Gumroad + Lemon Squeezy listing prep",
+    ],
+  },
   {
     id: "s1",
     number: 1,
@@ -567,8 +629,8 @@ export const sessions: SessionEntry[] = [
     number: 6,
     date: "March 30, 2026",
     title: "Agent Mission Control Product Launch",
-    status: "active",
-    timeRange: "10:28 PM CDT –",
+    status: "completed",
+    timeRange: "10:28 PM – 11:59 PM CDT",
     opening:
       "Late night session. Terry pivoted to monetizing the Agent Context Dashboard concept. Competitive research validated the gap — AgentOps/Helicone/Langfuse target devs, not operators. Pain confirmed by March 2026 context crisis. Decision: ship $49 template tonight/tomorrow.",
     syncs: [
