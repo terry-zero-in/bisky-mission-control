@@ -11,6 +11,8 @@ import {
   FileText,
   Terminal,
   MessageSquare,
+  Wrench,
+  Zap,
   Menu,
   X,
 } from "lucide-react";
@@ -22,6 +24,8 @@ const navItems = [
   { href: "/sessions", label: "Sessions", icon: MessageSquare },
   { href: "/tasks", label: "Tasks", icon: ListChecks },
   { href: "/commands", label: "Commands", icon: Terminal },
+  { href: "/tools", label: "Tools", icon: Wrench },
+  { href: "/skills", label: "Skills", icon: Zap },
   { href: "/opportunities", label: "Opportunities", icon: Crosshair },
   { href: "/briefing", label: "Briefing", icon: FileText },
 ];
