@@ -91,8 +91,8 @@ export function Sidebar() {
                 className={cn(
                   "flex items-center gap-3 rounded-md px-3 py-2 text-[13px] transition-colors",
                   isActive
-                    ? "border-l-2 border-accent bg-surface text-text-primary"
-                    : "border-l-2 border-transparent text-text-secondary hover:bg-surface hover:text-text-primary"
+                    ? "bg-[#1E1E26] text-text-primary"
+                    : "text-text-secondary hover:bg-[#1E1E26] hover:text-text-primary"
                 )}
               >
                 <item.icon size={16} />

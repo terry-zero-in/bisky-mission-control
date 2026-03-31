@@ -11,13 +11,13 @@ export function CompetitorRadar() {
 
   return (
     <div>
-      <h2 className="mb-3 text-[13px] font-medium uppercase tracking-widest text-text-muted">
+      <h2 className="mb-3 text-[12px] uppercase tracking-[0.06em] text-text-secondary">
         Competitor Radar
       </h2>
       <div className="rounded-lg bg-surface overflow-hidden">
         <table className="w-full text-left">
           <thead>
-            <tr className="border-b border-border text-[11px] uppercase tracking-widest text-text-muted">
+            <tr className="border-b border-border text-[10px] uppercase tracking-wider text-text-muted">
               <th className="px-4 py-2.5 font-medium">Company</th>
               <th className="px-4 py-2.5 font-medium">Threat</th>
               <th className="px-4 py-2.5 font-medium hidden sm:table-cell">
@@ -35,7 +35,7 @@ export function CompetitorRadar() {
                 onClick={() => setSelected(comp)}
                 className="cursor-pointer transition-colors hover:bg-surface-elevated border-t border-border first:border-t-0"
               >
-                <td className="px-4 py-2.5 text-[13px] text-text-primary">
+                <td className="px-4 py-2.5 text-[14px] text-text-primary">
                   {comp.company}
                 </td>
                 <td className="px-4 py-2.5">
@@ -78,7 +78,7 @@ export function CompetitorRadar() {
               <label className="text-[11px] uppercase tracking-widest text-text-muted">
                 Notes
               </label>
-              <p className="mt-1 text-[13px] leading-relaxed text-text-secondary">
+              <p className="mt-1 text-[14px] leading-relaxed text-text-secondary">
                 {selected.notes}
               </p>
             </div>

@@ -4,10 +4,10 @@ import { currentTask } from "@/lib/data";
 export function ActiveTask() {
   return (
     <div>
-      <h2 className="mb-3 text-[13px] font-medium uppercase tracking-widest text-text-muted">
+      <h2 className="mb-3 text-[12px] uppercase tracking-[0.06em] text-text-secondary">
         Active Task
       </h2>
-      <Card className="border-l-2 border-accent">
+      <Card>
         <div className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-amber animate-pulse-dot" />
           <span className="text-sm font-semibold text-text-primary">

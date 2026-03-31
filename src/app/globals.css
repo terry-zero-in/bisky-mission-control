@@ -3,14 +3,15 @@
 @theme inline {
   --color-bg: #0A0A0F;
   --color-sidebar: #121217;
-  --color-surface: #1E1E26;
-  --color-surface-elevated: #24242E;
+  --color-surface: #121217;
+  --color-surface-elevated: #16161D;
   --color-border: #2A2A34;
   --color-border-strong: #3A3A46;
   --color-text-primary: #F6F6FA;
   --color-text-secondary: #B3B3BE;
   --color-text-muted: #8F8F9F;
-  --color-accent: #00C8FF;
+  --color-accent: #F6F6FA;
+  --color-accent-dim: rgba(246, 246, 250, 0.08);
   --color-green: #34D399;
   --color-amber: #FBBF24;
   --color-red: #FF5E5E;
@@ -25,7 +26,7 @@
 }
 
 html {
-  background: var(--color-bg);
+  background: var(--color-sidebar);
   color: var(--color-text-primary);
 }
 

@@ -24,7 +24,7 @@ export function TaskQueue() {
 
   return (
     <div>
-      <h2 className="mb-3 text-[13px] font-medium uppercase tracking-widest text-text-muted">
+      <h2 className="mb-3 text-[12px] uppercase tracking-[0.06em] text-text-secondary">
         Task Queue
       </h2>
       <div className="rounded-lg bg-surface">
@@ -35,14 +35,14 @@ export function TaskQueue() {
             className={cn(
               "flex w-full items-center gap-3 px-4 py-3 text-left transition-colors hover:bg-surface-elevated",
               i !== 0 && "border-t border-border",
-              task.status === "in_progress" && "border-l-2 border-l-amber bg-amber/5",
+              task.status === "in_progress" && "bg-surface-elevated",
               task.status === "done" && "opacity-50"
             )}
           >
             <StatusBadge status={task.status} />
             <span
               className={cn(
-                "flex-1 text-[13px]",
+                "flex-1 text-[14px]",
                 task.status === "done"
                   ? "text-text-muted line-through"
                   : "text-text-primary"
@@ -76,7 +76,7 @@ export function TaskQueue() {
                     className={cn(
                       "rounded-full px-3 py-1 text-[11px] font-medium transition-colors",
                       selectedTask.status === s
-                        ? "bg-accent text-white"
+                        ? "bg-text-primary text-bg"
                         : "bg-surface-elevated text-text-secondary hover:text-text-primary"
                     )}
                   >
@@ -93,7 +93,7 @@ export function TaskQueue() {
                 <label className="text-[11px] uppercase tracking-widest text-text-muted">
                   Notes
                 </label>
-                <p className="mt-1 text-[13px] leading-relaxed text-text-secondary">
+                <p className="mt-1 text-[14px] leading-relaxed text-text-secondary">
                   {selectedTask.notes}
                 </p>
               </div>
@@ -104,7 +104,7 @@ export function TaskQueue() {
                 <label className="text-[11px] uppercase tracking-widest text-text-muted">
                   Blocked Reason
                 </label>
-                <p className="mt-1 text-[13px] text-red">
+                <p className="mt-1 text-[14px] text-red">
                   {selectedTask.blockedReason}
                 </p>
               </div>
@@ -114,7 +114,7 @@ export function TaskQueue() {
               <label className="text-[11px] uppercase tracking-widest text-text-muted">
                 Priority
               </label>
-              <p className="mt-1 text-[13px] capitalize text-text-primary">
+              <p className="mt-1 text-[14px] capitalize text-text-primary">
                 {selectedTask.priority}
               </p>
             </div>

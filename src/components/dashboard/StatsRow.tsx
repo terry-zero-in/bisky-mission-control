@@ -12,7 +12,7 @@ export function StatsRow() {
 
   return (
     <div>
-      <h2 className="mb-3 text-[13px] font-medium uppercase tracking-widest text-text-muted">
+      <h2 className="mb-3 text-[12px] uppercase tracking-[0.06em] text-text-secondary">
         Quick Stats
       </h2>
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">

@@ -30,7 +30,7 @@ export function CalendarStrip() {
 
   return (
     <div>
-      <h2 className="mb-3 text-[13px] font-medium uppercase tracking-widest text-text-muted">
+      <h2 className="mb-3 text-[12px] uppercase tracking-[0.06em] text-text-secondary">
         This Week
       </h2>
       <div className="rounded-lg bg-surface p-4">
@@ -41,21 +41,21 @@ export function CalendarStrip() {
               className={cn(
                 "flex flex-col items-center rounded-md py-2 transition-colors",
                 day.isToday
-                  ? "bg-accent/15"
+                  ? "bg-text-primary/10"
                   : "hover:bg-surface-elevated"
               )}
             >
               <span className="text-[10px] text-text-muted">{day.label}</span>
               <span
                 className={cn(
-                  "mt-1 font-mono text-[13px] font-medium",
-                  day.isToday ? "text-accent" : "text-text-primary"
+                  "mt-1 font-mono text-[14px] font-medium",
+                  day.isToday ? "text-text-primary" : "text-text-primary"
                 )}
               >
                 {day.dayNum}
               </span>
               {day.isToday && (
-                <span className="mt-1.5 h-1 w-1 rounded-full bg-accent" />
+                <span className="mt-1.5 h-1 w-1 rounded-full bg-text-primary" />
               )}
             </div>
           ))}

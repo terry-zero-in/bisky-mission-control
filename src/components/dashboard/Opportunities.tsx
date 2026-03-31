@@ -12,7 +12,7 @@ export function Opportunities() {
 
   return (
     <div>
-      <h2 className="mb-3 text-[13px] font-medium uppercase tracking-widest text-text-muted">
+      <h2 className="mb-3 text-[12px] uppercase tracking-[0.06em] text-text-secondary">
         Opportunities
       </h2>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -28,7 +28,7 @@ export function Opportunities() {
               </h3>
               <ConvictionBadge conviction={opp.conviction} />
             </div>
-            <p className="mt-2 text-[12px] leading-relaxed text-text-secondary line-clamp-2">
+            <p className="mt-2 text-[14px] leading-relaxed text-text-secondary line-clamp-2">
               {opp.summary}
             </p>
           </Card>
@@ -60,7 +60,7 @@ export function Opportunities() {
                 <label className="text-[11px] uppercase tracking-widest text-text-muted">
                   {label}
                 </label>
-                <p className="mt-1 text-[13px] leading-relaxed text-text-secondary">
+                <p className="mt-1 text-[14px] leading-relaxed text-text-secondary">
                   {value}
                 </p>
               </div>

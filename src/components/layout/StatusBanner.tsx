@@ -9,13 +9,13 @@ export function StatusBanner() {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="w-full border-t-2 border-accent bg-surface">
+    <div className="w-full border-b border-border bg-sidebar">
       <button
         onClick={() => setExpanded(!expanded)}
         className="flex w-full items-center justify-between px-5 py-3 text-left"
       >
         <span className="font-mono text-[12px] text-text-primary">
-          <span className="text-accent">Bisky</span>
+          <span className="text-text-primary">Bisky</span>
           <span className="text-text-muted"> — </span>
           {currentTask.title}
           <span className="text-text-muted"> | Next: </span>
@@ -41,7 +41,7 @@ export function StatusBanner() {
                 <span className="text-[11px] uppercase tracking-widest text-text-muted">
                   Current
                 </span>
-                <p className="text-[13px] text-text-primary mt-1">
+                <p className="text-[14px] text-text-primary mt-1">
                   {currentTask.title}
                   {currentTask.startedAt && (
                     <span className="ml-2 font-mono text-[11px] text-text-muted">
@@ -59,7 +59,7 @@ export function StatusBanner() {
                 <span className="text-[11px] uppercase tracking-widest text-text-muted">
                   Next
                 </span>
-                <p className="text-[13px] text-text-primary mt-1">
+                <p className="text-[14px] text-text-primary mt-1">
                   {nextTask.title}
                 </p>
               </div>

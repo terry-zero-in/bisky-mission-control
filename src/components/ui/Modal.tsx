@@ -54,7 +54,7 @@ export function Modal({
             exit={{ opacity: 0, scale: 0.96 }}
             transition={{ duration: 0.15, ease: [0.32, 0.72, 0, 1] }}
             className={cn(
-              "fixed left-1/2 top-1/2 z-50 w-full max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-lg bg-surface p-6",
+              "fixed left-1/2 top-1/2 z-50 w-full max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-lg border border-border bg-surface-elevated p-6",
               className
             )}
           >

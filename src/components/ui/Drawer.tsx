@@ -54,7 +54,7 @@ export function Drawer({
             exit={{ x: "100%" }}
             transition={{ duration: 0.2, ease: [0.32, 0.72, 0, 1] }}
             className={cn(
-              "fixed right-0 top-0 z-50 flex h-full w-full max-w-[480px] flex-col bg-surface",
+              "fixed right-0 top-0 z-50 flex h-full w-full max-w-[480px] flex-col border-l border-border bg-surface-elevated",
               className
             )}
           >

@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geist.variable} ${jetbrains.variable}`}>
-      <body className="min-h-screen bg-bg text-text-secondary antialiased">
+      <body className="min-h-screen bg-sidebar text-text-secondary antialiased">
         {children}
       </body>
     </html>

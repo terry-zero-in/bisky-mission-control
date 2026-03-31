@@ -11,7 +11,7 @@ export function Timeline() {
 
   return (
     <div>
-      <h2 className="mb-3 text-[13px] font-medium uppercase tracking-widest text-text-muted">
+      <h2 className="mb-3 text-[12px] uppercase tracking-[0.06em] text-text-secondary">
         Basis Build Timeline
       </h2>
       <div className="rounded-lg bg-surface p-4">
@@ -30,9 +30,9 @@ export function Timeline() {
                 className={cn(
                   "relative z-10 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-[10px] font-medium transition-all",
                   week.status === "completed" &&
-                    "bg-green text-black",
+                    "bg-green text-bg",
                   week.status === "active" &&
-                    "bg-accent text-white ring-2 ring-accent/30 ring-offset-2 ring-offset-bg",
+                    "bg-text-primary text-bg ring-2 ring-text-primary/20 ring-offset-2 ring-offset-bg",
                   week.status === "future" &&
                     "bg-surface-elevated text-text-muted hover:bg-border hover:text-text-secondary"
                 )}

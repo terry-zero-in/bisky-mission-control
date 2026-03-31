@@ -6,14 +6,14 @@ export function TodayFocus() {
 
   return (
     <div>
-      <h2 className="mb-3 text-[13px] font-medium uppercase tracking-widest text-text-muted">
+      <h2 className="mb-3 text-[12px] uppercase tracking-[0.06em] text-text-secondary">
         Today&apos;s Focus
       </h2>
       <Card>
         <p className="text-[11px] font-mono text-text-muted mb-2">
           {today.date}
         </p>
-        <p className="text-[13px] leading-relaxed text-text-secondary">
+        <p className="text-[14px] leading-relaxed text-text-secondary">
           {today.focus}
         </p>
       </Card>
