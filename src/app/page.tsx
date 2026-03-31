@@ -14,9 +14,11 @@ export default function Dashboard() {
     <div className="flex min-h-screen">
       <Sidebar />
       <main className="flex-1 lg:pl-[220px]">
-        <StatusBanner />
-        <div className="mx-auto max-w-5xl space-y-8 px-5 py-8 pt-14 lg:pt-8">
+        <div className="mx-auto max-w-5xl px-5 pt-14 lg:pt-8 pb-4">
           <TodayFocus />
+        </div>
+        <StatusBanner />
+        <div className="mx-auto max-w-5xl space-y-8 px-5 py-8">
           <ActiveTask />
           <StatsRow />
           <TaskQueue />
