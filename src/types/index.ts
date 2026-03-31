@@ -53,6 +53,13 @@ export interface ContextSnapshot {
   timestamp: string;    // ISO or human-readable
 }
 
+export interface SyncEntry {
+  number: number;
+  time: string;
+  context: ContextSnapshot;
+  summary: string;       // Full detailed sync summary
+}
+
 export interface SessionEntry {
   id: string;
   number: number;
@@ -61,7 +68,7 @@ export interface SessionEntry {
   status: "active" | "completed";
   timeRange: string;
   opening: string;
-  syncs: { label: string; summary: string; context?: ContextSnapshot }[];
+  syncs: SyncEntry[];
   closeout: string;
   closeoutContext?: ContextSnapshot;
   currentContext?: ContextSnapshot; // live, for active session only

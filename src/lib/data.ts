@@ -6,6 +6,7 @@ import type {
   TimelineWeek,
   SessionEntry,
   ContextSnapshot,
+  SyncEntry,
 } from "@/types";
 
 export const tasks: Task[] = [
@@ -334,7 +335,8 @@ export const sessions: SessionEntry[] = [
       "Overnight into morning. Framework and command system buildout, then Agent Context Dashboard deep dive with Terry.",
     syncs: [
       {
-        label: "Sync #1 (10:20 AM)",
+        number: 1,
+        time: "10:20 AM CDT",
         summary:
           "~4,800 words | ~10% context. Locked /sync + /closeout protocol. Created TODO, STATUS, INDEX, COMMANDS, RULES, OPPORTUNITIES. Agent Context Dashboard concept developed. OCR decision confirmed (Azure). Model upgraded Sonnet → Opus.",
         context: {
@@ -374,7 +376,8 @@ export const sessions: SessionEntry[] = [
       "Massive ingestion session. Terry sent Strategy Session PDF (14 pages), all 18 project files (zipped), and full HTML export with interactive split-pane mockup.",
     syncs: [
       {
-        label: "Sync #1 (12:55 PM)",
+        number: 1,
+        time: "12:55 PM CDT",
         summary:
           "~45,000 words | ~55-60% context. Read full Strategy PDF, researched all competitor links live, extracted all 18 project files, created BASIS_MASTER_BIBLE_v2.md. All doc conflicts resolved — Strategy Session is decision of record.",
         context: {
@@ -415,7 +418,8 @@ export const sessions: SessionEntry[] = [
       "Integrations audit — reviewed all 50 OpenClaw skills and 42+ plugins. Set up Notion, browser, session logging. Massive UI/UX deep dive with theme testing and component consolidation.",
     syncs: [
       {
-        label: "Sync #1 (3:36 PM)",
+        number: 1,
+        time: "3:36 PM CDT",
         summary:
           "~85,000+ words | 16% of 1M context. Integrations audit complete. Notion connected. Sessions page deployed. v0 repo analyzed. v6.3 HTML themes extracted. 4 Figma screenshots analyzed. 5-theme recommendation proposed. 13.6KB component spec consolidated.",
         context: {
@@ -458,14 +462,85 @@ export const sessions: SessionEntry[] = [
     timeRange: "5:57 PM CDT –",
     opening:
       "New session. Executed 3 carryover items from Session #4 closeout: fleshed out Sessions #1-3 with full raw detail, established briefing hierarchy rule, full TODO.md audit. New rule: always read previous notes on session start.",
-    syncs: [],
+    syncs: [
+      {
+        number: 1,
+        time: "9:07 PM CDT",
+        context: {
+          tokens: "180k/1.0m",
+          percent: 18,
+          practicalPercent: 72,
+          compactions: 0,
+          timestamp: "2026-03-30 21:07 CDT",
+        },
+        summary: `**Time:** 5:57 PM – 9:07 PM CDT (3h 10m) | **Context:** 180k / 1M (18%) | 72% of 250K ceiling | 0 compactions | **Feel:** Sharp, full recall, no degradation
+
+**Housekeeping (first 30 min):**
+- New rule added: always read previous session notes on startup, never ask
+- Sessions #1-3 fleshed out with full raw detail in SESSION_LOG.md
+- Daily briefing hierarchy rule added (sessions = record, briefing = derivative)
+- TODO.md full audit — statuses updated, new tasks added, 25+ completed items marked
+- Mission Control data.ts fully rewritten with current state, pushed
+- Context % tracking added to sessions page (ContextSnapshot type, bars, badges), pushed
+
+**Basis Codebase Review (step 1 of 5):**
+- Read ALL 11 engine files + types + DealForm + architecture analysis from _Reticle Project/_Basis App/
+- Created BASIS_INPUT_CATALOG.md — complete 179-field inventory with data types, engine keys, RRA extraction relevance
+- Terry confirmed I understand the engine: 3 rent tiers, turnover-driven renovation schedule, retention rate as bottleneck, ~30-36 months to 80% renovation, deceleration curve
+
+**Cactus Deep Dive:**
+- Launched Sonnet subagent — produced 38K+ word competitive dossier (CACTUS_DEEP_DIVE.md)
+- Key findings: annual-only CFs, no waterfall, value-add is a toggle not a schedule, "import your model" is misleading, storage DNA, $175/mo
+
+**The Missing Component — Renewal Strategy Engine (MAJOR):**
+- Terry walked through the full lease-level turnover modeling system. This is NEW engine work not in current codebase.
+- Year 1: actual lease-by-lease expiration data from rent roll (not flat totalUnits/12)
+- Renewal strategy inputs (by floor plan): % increase, $ increase, or minimum floor (e.g., 90% of market)
+- Implied increase calculated per tenant → variable turnover probability thresholds
+- Hard cap: increase can NEVER exceed market rent
+- Year 2+: revert to normalized (totalUnits/12) — new owner staggers lease terms
+- Renovation flexibility: 0/1/2/3 tiers, user sets % of turnovers to renovate
+
+**RRA Output Spec:**
+- Terry sent exhaustive field/analytics/visualization list — saved to RRA_OUTPUT_SPEC.md
+- OneSite rent roll format analyzed — all fields mapped to engine
+- Critical parsing: pending renewal = separate asterisk row, signed renewal = second line within same row
+- Market rents in PMS are NOT gospel (can be stale)
+- 30-60-90 analysis with three buckets: NTV / Pending / Neither
+
+**RRA Product Spec (MAJOR):**
+- Terry sent his full 6-part product thesis — completely replaced the Manus 5-step pipeline
+- Single canvas flow, no wizard, real-time streaming extraction
+- Two-layer review: batch categorical confirmation + row-level anomaly badges
+- Four mandatory confirmations: unit count, as-of date, column mapping, unit type mapping
+- Seven output categories: unit mix, revenue, lease schedule, concessions, other income, anomalies, model-ready export
+- Per-property learning, saved export templates, delta/version comparison
+- Merged my UX (single canvas evolving, split-pane on demand) with his extraction logic + confirmation framework
+
+**Files created/updated this session:**
+- BASIS_INPUT_CATALOG.md (new, 13.7KB)
+- RRA_OUTPUT_SPEC.md (new, 10.9KB)
+- CACTUS_DEEP_DIVE.md (new, 38K+ words from subagent)
+- RULES.md (updated — session startup rule, briefing hierarchy)
+- TODO.md (full audit)
+- SESSION_LOG.md (sessions #1-3 fleshed out, #5 opened)
+- Mission Control data.ts, types/index.ts, sessions/page.tsx (context tracking)
+
+**Open / Next:**
+- Write definitive RRA build spec from merged vision
+- Create clean Basis repo and launch Claude Code
+- Design system lock (step 2 of 5) — deferred until RRA direction settled
+- Input research pass (institutional assumptions audit) — Terry wants to do after RRA is moving
+- Renewal strategy engine spec needs formal write-up for Claude Code`,
+      },
+    ],
     closeout: "",
     currentContext: {
-      tokens: "61k/1.0m",
-      percent: 6,
-      practicalPercent: 24,
+      tokens: "180k/1.0m",
+      percent: 18,
+      practicalPercent: 72,
       compactions: 0,
-      timestamp: "2026-03-30 18:09 CDT",
+      timestamp: "2026-03-30 21:07 CDT",
     },
     accomplishments: [
       "Session #4 carryover items executed (3/3)",
@@ -473,11 +548,18 @@ export const sessions: SessionEntry[] = [
       "SESSION_LOG.md Sessions #1-3 fleshed out with raw detail",
       "TODO.md fully audited and updated",
       "Mission Control data fully updated + pushed",
+      "Full Basis codebase review — all 11 engine files read",
+      "BASIS_INPUT_CATALOG.md — 179 fields cataloged",
+      "Cactus deep dive — 38K+ word competitive dossier",
+      "Renewal strategy engine spec'd with Terry",
+      "RRA output spec received and saved",
+      "Terry's 6-part RRA product thesis — scrapped 5-step pipeline",
+      "Merged UX: single canvas flow, no wizard",
     ],
     inProgress: [
-      "Basis codebase review (step 1 of 5)",
-      "Design system lock pending",
-      "Claude Code deployment prep",
+      "Write definitive RRA build spec",
+      "Create clean repo + launch Claude Code",
+      "Design system lock deferred until RRA moving",
     ],
   },
 ];

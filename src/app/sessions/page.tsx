@@ -190,11 +190,11 @@ function SessionDetail({ session }: { session: SessionEntry }) {
               >
                 <div className="mb-1 flex items-center gap-2 text-[11px] font-medium text-text-primary">
                   <Clock size={12} className="text-text-muted" />
-                  {sync.label}
+                  Sync #{sync.number} ({sync.time})
                 </div>
-                <p className="text-[12px] leading-relaxed text-text-secondary">
+                <div className="text-[12px] leading-relaxed text-text-secondary whitespace-pre-wrap">
                   {sync.summary}
-                </p>
+                </div>
                 {sync.context && (
                   <div className="mt-2">
                     <ContextBar ctx={sync.context} />
